@@ -30,7 +30,7 @@
                         <form action="validar.php" method="POST" class="my-3">
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                <input type="email" class="form-control" placeholder="Correo Electronico" name="txtCorreo">
+                                <input type="email" class="form-control" placeholder="Correo Electronico" name="txtCorreo" onKeypress="validacion()">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
@@ -46,5 +46,11 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        function validacion() {
+            if (event.keyCode > 32 && event.keyCode < 48 || event.keyCode > 57 && event.keyCode < 65 ||event.keyCode > 64 && event.keyCode < 90 || event.keyCode > 90 && event.keyCode < 95 || event.keyCode > 96 && event.keyCode < 1 ||event.keyCode > 122 && event.keyCode < 160 || event.keyCode > 166 && event.keyCode < 190) event.returnValue = false;
+        }
+    </script>
 </body>
 </html>

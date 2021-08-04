@@ -33,12 +33,14 @@ $txtPws = isset($_POST['txtPws']) ? $_POST['txtPws'] : '';
        echo '
        <script>
         alert("bienvendio '.$nombre.'")
+        window.location="index.html"
       </script>
       ';
    }else{
        echo '
        <script>
         alert("pon bien los datos '.$nombre.'")
+        window.location="login.html"
       </script>
        ';
    }
